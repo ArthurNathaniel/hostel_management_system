@@ -1,0 +1,64 @@
+.register_all {
+    background-color: #fff;
+    width: 90%;
+    margin: 0 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-block: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.forms_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.forms input , .forms button {
+    height: 50px;
+    width: 95%;
+}
+.forms button{
+    background-color: #000;
+    color: #fff;
+    height: 60px;
+}
+.profile_all {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#img-preview {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-block: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#file-input {
+    display: none;
+}
+
+.label {
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+   
+
+}

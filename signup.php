@@ -66,29 +66,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div class="page-all">
-        <form action="signup.php" method="post">
-            <div class="forms-all">
-                <div class="forms-title">
-                    <h1>Admin - Sign Up Page</h1>
+    <div class="page_all">
+        <div class="page_swiper">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/slide_one.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide_two.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide_three.jpg" alt="">
+                    </div>
                 </div>
-                <?php if (!empty($error_message)) : ?>
-                    <div class="error-message"><?php echo $error_message; ?></div>
-                <?php endif; ?>
-                <div class="forms">
-                    <label>Username:</label>
-                    <input type="text" name="username" placeholder="Enter your username" required />
-                </div>
-                <div class="forms">
-                    <label>Password:</label>
-                    <input type="password" name="password" placeholder="Enter your password" required />
-                </div>
-                <div class="forms">
-                    <button type="submit">Sign Up</button>
+                <div class="swiper_btn">
+                    <div class="swiper-button-next s_btn"></div>
+                    <div class="swiper-button-prev s_btn"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="page_form">
+            <form action="signup.php" method="post">
+                <div class="forms-all">
+                    <div class="forms-title">
+                        <h1>Admin - Sign Up </h1>
+                    </div>
+                    <?php if (!empty($error_message)) : ?>
+                        <div class="error-message"><?php echo $error_message; ?></div>
+                    <?php endif; ?>
+                    <div class="forms">
+                        <label>Username:</label>
+                        <input type="text" name="username" placeholder="Enter your username" required />
+                    </div>
+                    <div class="forms">
+                        <label>Password:</label>
+                        <input type="password" name="password" placeholder="Enter your password" required />
+                    </div>
+                    <div class="forms">
+                        <button type="submit">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+    <script src="./js/authentication_swiper.js.js"></script>
 </body>
+
 
 </html>

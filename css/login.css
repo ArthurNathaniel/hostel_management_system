@@ -12,7 +12,8 @@
     margin-block: 5vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.page_swiper{
+
+.page_swiper {
     overflow-x: hidden;
 }
 
@@ -79,7 +80,7 @@
     opacity: 0;
 }
 
-.swiper_btn{
+.swiper_btn {
     position: absolute;
     bottom: 50px;
     width: 30%;
@@ -87,7 +88,7 @@
     background-color: red !important;
 }
 
-.s_btn{
+.s_btn {
     background-color: #000;
     height: 60px;
     width: 60px;
@@ -97,7 +98,7 @@
 .swiper-button-prev {
     position: absolute;
     top: var(--swiper-navigation-top-offset, 50%);
-height: 60px;
+    height: 60px;
     width: 60px;
     margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
     z-index: 10;

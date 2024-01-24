@@ -1,0 +1,21 @@
+
+table {
+    width: 100%;
+}
+.container{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.profile{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.heading{
+padding-top: 50px;
+    margin-bottom: 30px;
+}

@@ -10,13 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT id, password FROM students WHERE username = ?");
+    $stmt = $conn->prepare("SELECT id, password FROM student WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->bind_result($student_id, $hashed_password);
     $stmt->fetch();
 
-    if (password_verify($password, $hashed_password)) {
+    if ($hashed_password && password_verify($password, $hashed_password)) {
+        // Password is correct
         // Set session variable for successful login
         $_SESSION['student_id'] = $student_id;
 
@@ -32,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,4 +1,28 @@
 <!-- student_profile.php -->
+<?php
+require('db.php');
+
+session_start(); // Start the session
+
+// Check if the user is logged in
+if (!isset($_SESSION['student_id'])) {
+    header("Location: login_student.php");
+    exit();
+}
+
+$student_id = $_SESSION['student_id'];
+
+// Retrieve data from the 'student' table based on the correct table name
+$stmt = $conn->prepare("SELECT first_name, last_name, dob, phone_number, father_name, father_number, mother_name, mother_number, emergency_contact, username, profile_image FROM student WHERE id = ?");
+$stmt->bind_param("i", $student_id);
+$stmt->execute();
+$stmt->bind_result($first_name, $last_name, $dob, $phone_number, $father_name, $father_number, $mother_name, $mother_number, $emergency_contact, $username, $profile_image);
+$stmt->fetch();
+$stmt->close();
+
+// Display user data in the HTML page
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,49 +30,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Profile</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Add your CSS stylesheets or links here -->
 </head>
 
 <body>
-    <div class="page-all">
-        <div class="forms-all">
-            <div class="forms-title">
-                <h1>Student Profile</h1>
-            </div>
-            <div class="profile-info">
-                <?php
-                // Retrieve and display student details
-                require('db.php');
-                session_start();
+    <h1>Welcome, <?php echo $username; ?>!</h1>
+    <p>First Name: <?php echo $first_name; ?></p>
+    <p>Last Name: <?php echo $last_name; ?></p>
+    <p>Date of Birth: <?php echo $dob; ?></p>
+    <p>Phone Number: <?php echo $phone_number; ?></p>
+    <p>Father's Name: <?php echo $father_name; ?></p>
+    <p>Father's Number: <?php echo $father_number; ?></p>
+    <p>Mother's Name: <?php echo $mother_name; ?></p>
+    <p>Mother's Number: <?php echo $mother_number; ?></p>
+    <p>Emergency Contact: <?php echo $emergency_contact; ?></p>
+    <p>Profile Image: <img src="<?php echo $profile_image; ?>" alt="Profile Image"></p>
 
-                if (isset($_SESSION['student_id'])) {
-                    $student_id = $_SESSION['student_id'];
+    <!-- Add other profile details as needed -->
 
-                    $stmt = $conn->prepare("SELECT first_name, last_name, dob, parent_name, emergency_contact, username FROM students WHERE id = ?");
-                    $stmt->bind_param("i", $student_id);
-                    $stmt->execute();
-                    $stmt->bind_result($first_name, $last_name, $dob, $parent_name, $emergency_contact, $username);
-                    $stmt->fetch();
-
-                    echo "<p><strong>Name:</strong> $first_name $last_name</p>";
-                    echo "<p><strong>Date of Birth:</strong> $dob</p>";
-                    echo "<p><strong>Parent's Name:</strong> $parent_name</p>";
-                    echo "<p><strong>Emergency Contact:</strong> $emergency_contact</p>";
-                    echo "<p><strong>Username:</strong> $username</p>";
-
-                    $stmt->close();
-                } else {
-                    echo "Session not set. Please log in.";
-                }
-
-                $conn->close();
-                ?>
-            </div>
-            <div class="forms">
-                <a href="logout_student.php">Logout</a>
-            </div>
-        </div>
-    </div>
+    <!-- Add your HTML and styling for the profile page -->
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
 </body>
 
 </html>

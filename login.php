@@ -38,36 +38,60 @@ $conn->close();
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin - Login Page</title>
+    <title>Login Page - Admin </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/login.css">
-   
+
 </head>
 
 <body>
-    <div class="page-all">
-        <form action="login.php" method="post">
-            <div class="forms-all">
-                <div class="forms-title">
-                    <h1>Admin - Login Page</h1>
+    <div class="page_all">
+        <div class="page_swiper">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/slide_one.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide_two.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide_three.jpg" alt="">
+                    </div>
                 </div>
-                <?php if (!empty($error_message)) : ?>
-                    <div class="error-message"><?php echo $error_message; ?></div>
-                <?php endif; ?>
-                <div class="forms">
-                    <label>Username:</label>
-                    <input type="text" name="username" placeholder="Enter your username" required />
-                </div>
-                <div class="forms">
-                    <label>Password:</label>
-                    <input type="password" name="password" placeholder="Enter your password" required />
-                </div>
-                <div class="forms">
-                    <button type="submit">Login</button>
+                <div class="swiper_btn">
+                    <div class="swiper-button-next s_btn"></div>
+                    <div class="swiper-button-prev s_btn"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="page_form">
+            <form action="login.php" method="post">
+                <div class="forms-all">
+                    <div class="forms-title">
+                        <h1>Admin - Login Page</h1>
+                    </div>
+                    <?php if (!empty($error_message)) : ?>
+                        <div class="error-message"><?php echo $error_message; ?></div>
+                    <?php endif; ?>
+                    <div class="forms">
+                        <label>Username:</label>
+                        <input type="text" name="username" placeholder="Enter your username" required />
+                    </div>
+                    <div class="forms">
+                        <label>Password:</label>
+                        <input type="password" name="password" placeholder="Enter your password" required />
+                    </div>
+                    <div class="forms">
+                        <button type="submit">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
@@ -81,6 +105,24 @@ $conn->close();
                 }, 3000); // Wait for the transition to complete before hiding
             }
         }, 3000);
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
     </script>
 </body>
 

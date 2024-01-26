@@ -42,34 +42,61 @@ $conn->close();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Login</title>
+    <?php include 'cdn.php'; ?>
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/login.css" />
 </head>
 
 <body>
-    <div class="page-all">
-        <form action="" method="post">
-            <div class="forms-all">
-                <div class="forms-title">
-                    <h1>Student Login</h1>
+    <div class="page_all">
+        <div class="page_swiper">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/slide_one.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide_two.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide_three.jpg" alt="">
+                    </div>
                 </div>
-                <?php if (!empty($error_message)) : ?>
-                    <div class="error-message"><?php echo $error_message; ?></div>
-                <?php endif; ?>
-                <div class="forms">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" id="username" required />
-                </div>
-                <div class="forms">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" required />
-                </div>
-                <div class="forms">
-                    <button type="submit">Login</button>
+                <div class="swiper_btn">
+                    <div class="swiper-button-next s_btn"></div>
+                    <div class="swiper-button-prev s_btn"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="page_form">
+            <form action="" method="post">
+                <div class="forms-all">
+                    <div class="forms-title">
+                        <h1>Student Login</h1>
+                    </div>
+                    <?php if (!empty($error_message)) : ?>
+                        <div class="error-message"><?php echo $error_message; ?></div>
+                    <?php endif; ?>
+                    <div class="forms">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" required />
+                    </div>
+                    <div class="forms">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" required />
+                    </div>
+                    <div class="forms">
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="forms">
+                        <a href="./reset_password.php">Forget password</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+    <script src="./js/authentication_swiper.js.js"></script>
 </body>
 
 </html>

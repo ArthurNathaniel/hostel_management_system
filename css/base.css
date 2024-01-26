@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Caros';
-    background-color: #f2f5f8;
+    background-color: #f4f2ee;
     width: 100%;
     overflow-x: hidden;
 }
@@ -117,4 +117,17 @@ body {
    #toggleButton i{
     font-size: 20px;
     
+   }
+
+
+   .footer {
+       position: absolute;
+       bottom: 0;
+       width: 100%;
+       text-align: center;
+   }
+
+   .links i{
+    padding-right: 10px;
+ 
    }

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hostel Management - Register Student</title>
+    <title>Register Student</title>
     <?php include 'cdn.php'; ?>
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/register.css">
@@ -82,7 +82,7 @@
                         <input type="password" name="password" id="password" required />
                     </div>
                     <div class="forms">
-                        <button type="submit" onclick="return validateForm()">Register a student</button>
+                        <button type="submit">Register a student</button>
                     </div>
                 </div>
             </div>
@@ -93,23 +93,7 @@
                 maxDate: "today" // Optionally set a maximum date (e.g., today)
             });
         </script>
-        <script>
-            function validateForm() {
-                // You can add more client-side validation if needed
-                var username = document.getElementById('username').value.trim();
-                var emergencyContact = document.getElementById('emergency_contact').value.trim();
-
-                // Check if the username or emergency contact is empty
-                if (username === '' || emergencyContact === '') {
-                    alert('Please fill in all required fields.');
-                    return false; // Prevent form submission
-                }
-
-                // Check additional conditions if needed
-
-                return true; // Allow form submission
-            }
-        </script>
+       
         <script>
             const input = document.getElementById("file-input");
             const image = document.getElementById("img-preview");

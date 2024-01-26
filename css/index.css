@@ -1,0 +1,44 @@
+.index_all{
+    padding: 0 10%;
+    height: 100vh;
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns{
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.admin_btn{
+    padding: 15px 35px;
+    background-color: #000;
+    border-radius: 30px;
+}
+
+.admin_btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.book{
+padding: 15px 35px;
+    background-color: #000;
+    border-radius: 30px;
+}
+
+.book a{
+    text-decoration: none;
+        color: #fff;
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+}

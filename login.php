@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['authenticated'] = true;
 
         // Redirect to index.php after successful login
-        header("Location: index.php");
+        header("Location: dashboard.php");
         exit();
     } else {
         $error_message = "Invalid username or password.";

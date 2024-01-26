@@ -1,0 +1,37 @@
+.student_profile_all{
+    margin-top: 50px;
+    width: 90%;
+margin: 0 5%;
+padding-block: 50px;
+background-color: #fff;
+}
+
+.profile_image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.student_profile_all {
+    padding: 0 3%;
+    padding-block: 50px;
+}
+
+.profile {
+    margin-top: 20px;
+    width: 95%;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f4f2ee;
+}
+
+.profile_image {
+    margin-top: 30px;
+}

@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Hostel Room Type</title>
     <?php include 'cdn.php'; ?>
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/index.css">
 
     <!-- Include Typed.js from CDN -->
-   
+
     <!-- Your custom script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize Typed.js
             var options = {
-                strings: ['Welcome to Hostel Management System'],
+                strings: ['Book a room of your choice'],
                 typeSpeed: 50,
                 showCursor: false,
             };
@@ -46,29 +46,21 @@
 
         <div class="btns">
             <div class="admin_btn">
-                <a href="login.php">Admin Login</a>
+                <a href="#">Single room</a>
             </div>
 
             <div class="admin_btn">
-                <a href="login_student.php">Student Login</a>
+                <a href="#">Double room</a>
             </div>
         </div>
 
         <div class="btns">
             <div class="book">
-                <a href="book_a_hostel_room.php">Book a hostel room</a>
+                <a href="#">Triple room</a>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <p>
-            All Copyright &copy; Reserved
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-            | Hostel Management System
-        </p>
-    </div>
+    <?php include 'footer.php' ?>
 </body>
 
 </html>

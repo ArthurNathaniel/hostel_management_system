@@ -35,3 +35,18 @@ background-color: #fff;
 .profile_image {
     margin-top: 30px;
 }
+
+
+@media only screen and (max-width: 1110px) {
+    .profile_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+.profile_grid {
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+}

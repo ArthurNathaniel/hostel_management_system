@@ -20,6 +20,15 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="./css/announcement.css">
+    <style>
+        .announcement button {
+            background-color: red;
+            border: none;
+            padding: 15px 45px;
+            color: #fff;
+            border-radius: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -57,7 +66,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                     echo $row['announcement'];
                     echo "<form method='post' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "' onsubmit='return confirm(\"Are you sure you want to delete this announcement?\");'>";
                     echo "<input type='hidden' name='announcement_id' value='" . $row['id'] . "'/>";
-                    echo "<button type='submit'>Delete</button>";
+                    echo "<button type='submit'> <i class='fas fa-trash-alt'></i> | Delete</button>";
                     echo "</form>";
                     echo "</div>";
                 }

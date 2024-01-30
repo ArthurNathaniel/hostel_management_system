@@ -1,0 +1,35 @@
+.forms h2 {
+    color: #6158e5;
+}
+
+.reports_all {
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    padding-block: 50px;
+    width: 90%;
+    margin: 0 5%;
+    margin-block: 50px;
+}
+
+.forms textarea {
+    height: 300px;
+    border: 2px solid #6158e5;
+}
+
+.forms textarea:focus{
+    outline: none;
+}
+
+.forms input[type=submit] {
+    background-color: #6158e5;
+    color: #fff;
+    border: none;
+}
+
+.success-message{
+    width: 80%;
+    margin: 0 10%;
+    background-color: #f2f5f8;
+    padding: 20px;
+    margin-bottom: 20px;
+}

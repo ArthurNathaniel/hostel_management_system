@@ -75,7 +75,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
             }
             ?>
 
-            <form id="announcementForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <form id="announcementForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validateAndSubmit()">
                 <div class="forms">
                     <label for="announcement">Announcement:</label>
                     <!-- Quill editor container -->
@@ -85,7 +85,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                 </div>
 
                 <div class="forms">
-                    <button type="button" onclick="validateAndSubmit()">Add Announcement</button>
+                    <button type="submit">Add Announcement</button>
                 </div>
             </form>
 
@@ -93,17 +93,6 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     </div>
 
     <script>
-        function validateAndSubmit() {
-            var announcementContent = document.querySelector('#editor .ql-editor').innerHTML.trim();
-            document.querySelector('#hidden_announcement').value = announcementContent;
-
-            if (announcementContent === '') {
-                alert('Error: Announcement cannot be empty.');
-            } else {
-                document.getElementById('announcementForm').submit();
-            }
-        }
-
         document.addEventListener("DOMContentLoaded", function() {
             var quill = new Quill('#editor', {
                 theme: 'snow',
@@ -120,8 +109,25 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                     ]
                 }
             });
+
+            document.getElementById('announcementForm').addEventListener('submit', function(event) {
+                var announcementContent = quill.root.textContent.trim();
+
+                if (announcementContent === '') {
+                    alert('Error: Announcement cannot be empty.');
+                    event.preventDefault(); // Prevent form submission
+                } else {
+                    // Set the value of the hidden input field
+                    document.querySelector('#hidden_announcement').value = announcementContent;
+                }
+            });
         });
     </script>
+
+
+
+
+
 
     <script src="./js/navbar.js"></script>
     <?php include 'footer.php'; ?>

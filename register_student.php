@@ -18,11 +18,14 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <title>Register Student</title>
     <?php include 'cdn.php'; ?>
     <link rel="stylesheet" href="./css/base.css" />
+
     <link rel="stylesheet" href="./css/register.css">
 </head>
 
 <body>
-    <?php include 'sidebar.php' ?>
+    <div class="hey">
+        <?php include 'sidebar.php' ?>
+    </div>
     <!-- <button id="toggleButton">
         <i class="fa-solid fa-bars-staggered"></i>
     </button> -->
@@ -53,6 +56,13 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                     <div class="forms">
                         <label for="last_name">Last Name:</label>
                         <input type="text" name="last_name" id="last_name" required />
+                    </div>
+                    <div class="forms">
+                        <label for="gender">Gender:</label>
+                        <select name="gender" id="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
                     </div>
                     <div class="forms">
                         <label for="dob">Date of Birth:</label>
@@ -91,9 +101,10 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                         <label for="password">Password:</label>
                         <input type="password" name="password" id="password" required />
                     </div>
-                    <div class="forms">
-                        <button type="submit">Register a student</button>
-                    </div>
+
+                </div>
+                <div class="forms">
+                    <button type="submit">Register a student</button>
                 </div>
             </div>
         </form>

@@ -5,6 +5,7 @@
     padding-left: 2%;
     padding-right: 2%;
     padding-block: 50px;
+    margin-block: 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -19,18 +20,26 @@
     margin-bottom: 30px;
 }
 
-.forms input , .forms button {
+.forms input {
     height: 50px;
     width: 95%;
     border: 2px solid #6158e5;
     border-radius: 5px;
+}
+
+.forms select{
+    height: 50px;
+        width: 95%;
+        border: 2px solid #6158e5;
+        border-radius: 5px;
 }
 .forms button{
 background-color: #6158e5;
 border: none;
     color: #fff;
     height: 60px;
-    border-radius: 20px;
+    border-radius: 10px;
+   width: 32%;
 }
 .profile_all {
     width: 100%;
@@ -72,6 +81,10 @@ border: none;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+        .forms button {
+           
+            width: 48%;
+        }
 }
 
 @media only screen and (max-width: 910px) {
@@ -85,4 +98,12 @@ border: none;
     .forms input{
         width: 100%;
     }
+
+        .forms select {
+            width: 100%;
+        }
+        .forms button {
+    
+            width: 100%;
+        }
 }

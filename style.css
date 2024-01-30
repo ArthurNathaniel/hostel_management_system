@@ -6,7 +6,7 @@ body{
 }
 .gallery_title span {
     background-color: #fff;
-    color: #b500ae;
+    color: #ff4961;
     padding-right: 20px;
     padding-left: 20px;
     border-top-right-radius: 30px;
@@ -50,7 +50,7 @@ body{
 .logo_name span {
     display: flex;
     flex-direction: column;
-    color: #b500ae;
+    color: #ff4961;
 
 }
 
@@ -62,7 +62,7 @@ body{
 
 .logins button {
     border: none;
-    background-color: #060240;
+    background-color: #ff4961;
     padding: 15px 45px;
     border-top-right-radius: 30px;
 }
@@ -153,13 +153,13 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #b500ae;
+    background-color: #ff4961;
     transition: left 0.3s ease-in-out;
     z-index: -90;
 }
 
 .booking_btns button:hover {
-    background-color: #b500ae;
+    background-color: #ff4961;
 }
 
 .booking_btns button:hover::before {
@@ -242,7 +242,7 @@ label{
 }
 
 .logo_footer span{
-    color: #b500ae;
+    color: #ff4961;
 }
 
 .social_media{
@@ -273,7 +273,7 @@ label{
 }
 
 .media_links a:hover{
-    color: #b500ae;
+    color: #ff4961;
 }
 .map{
     width: 95%;

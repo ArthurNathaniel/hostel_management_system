@@ -13,10 +13,10 @@ if (!isset($_SESSION['student_id'])) {
 $student_id = $_SESSION['student_id'];
 
 // Retrieve data from the 'student' table based on the correct table name
-$stmt = $conn->prepare("SELECT first_name, middle_name, last_name, dob, phone_number, father_name, father_number, mother_name, mother_number, emergency_contact, username, profile_image FROM student WHERE id = ?");
+$stmt = $conn->prepare("SELECT id,first_name, middle_name, last_name, gender, dob, phone_number, father_name, father_number, mother_name, mother_number, emergency_contact, username, profile_image FROM student WHERE id = ?");
 $stmt->bind_param("i", $student_id);
 $stmt->execute();
-$stmt->bind_result($first_name, $middle_name, $last_name, $dob, $phone_number, $father_name, $father_number, $mother_name, $mother_number, $emergency_contact, $username, $profile_image);
+$stmt->bind_result($id, $first_name, $middle_name, $last_name, $gender, $dob, $phone_number, $father_name, $father_number, $mother_name, $mother_number, $emergency_contact, $username, $profile_image);
 $stmt->fetch();
 $stmt->close();
 
@@ -44,6 +44,12 @@ $stmt->close();
         </div>
         <div class="profile_grid">
             <div class="profile">
+                <h4>Student Hostel ID: </h4>
+                <p>
+                    <?php echo $id; ?>
+                </p>
+            </div>
+            <div class="profile">
                 <h4>First Name: </h4>
                 <p>
                     <?php echo $first_name; ?>
@@ -56,6 +62,10 @@ $stmt->close();
             <div class="profile">
                 <h4>Last Name:</h4>
                 <p> <?php echo $last_name; ?></p>
+            </div>
+            <div class="profile">
+                <h4>Gender:</h4>
+                <p> <?php echo $gender; ?></p>
             </div>
             <div class="profile">
                 <h4>Date of Birth:</h4>

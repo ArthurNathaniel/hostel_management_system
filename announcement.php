@@ -26,8 +26,8 @@
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    // Use htmlspecialchars_decode to decode HTML entities and display images
-                    $decodedAnnouncement = htmlspecialchars_decode($row['announcement']);
+                    // Use html_entity_decode to properly decode HTML content
+                    $decodedAnnouncement = html_entity_decode($row['announcement']);
                     echo "<div class='announcement'>" . $decodedAnnouncement . "</div>";
                 }
             } else {
@@ -38,12 +38,8 @@
             ?>
         </div>
     </div>
-    <?php include 'footer.php'; ?>
+
     <script src="./js/navbar.js"></script>
 </body>
 
 </html>
-
-<style>
-
-</style>

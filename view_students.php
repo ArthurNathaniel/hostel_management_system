@@ -33,7 +33,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
             require('db.php');
 
             // Fetch all students from the 'student' table
-            $sql = "SELECT id, first_name, middle_name, last_name, dob, phone_number, father_name, father_number, mother_name, mother_number, emergency_contact, username, profile_image FROM student";
+            $sql = "SELECT id, first_name, middle_name, last_name, gender, dob, phone_number, father_name, father_number, mother_name, mother_number, emergency_contact, username, profile_image FROM student";
             $result = mysqli_query($conn, $sql);
 
             // Check if there are any students
@@ -46,6 +46,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                             <th>First Name</th>
                             <th>Middle Name</th>
                             <th>Last Name</th>
+                            <th>Gender</th>
                             <th>DOB</th>
                             <th>Phone No.</th>
                             <th>Father's Name</th>
@@ -65,6 +66,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                         <td>{$row['first_name']}</td>
                         <td>{$row['middle_name']}</td>
                         <td>{$row['last_name']}</td>
+                        <td>{$row['gender']}</td>
                         <td>{$row['dob']}</td>
                         <td>{$row['phone_number']}</td>
                         <td>{$row['father_name']}</td>

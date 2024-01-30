@@ -19,20 +19,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <title>View Bookings</title>
     <?php include 'cdn.php'; ?>
     <link rel="stylesheet" href="./css/base.css" />
-    <!-- Include Bootstrap CSS -->
+  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <style>
-        /* Add custom CSS for setting the background color of table header */
-        th {
-            background-color: #6158e5 !important;
-            color: #fff !important;
-        }
-
-        .view_booking {
-            padding: 0 5%;
-
-        }
-    </style>
+    <link rel="stylesheet" href="./css/view_bookng.css">
 </head>
 
 

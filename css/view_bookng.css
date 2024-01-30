@@ -1,0 +1,25 @@
+      .table-responsive{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      th {
+          background-color: #6158e5 !important;
+          color: #fff !important;
+      }
+
+      .view_booking {
+          padding: 0 5%;
+
+      }
+
+      td,
+      th {
+          border: 2px solid #fff;
+      }
+
+      .view_booking {
+          margin-block: 50px;
+      }
+
+      .view_booking h2 {
+          margin-bottom: 20px;
+      }

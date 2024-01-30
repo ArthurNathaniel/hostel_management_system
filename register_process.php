@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $emergency_contact = mysqli_real_escape_string($conn, $_POST['emergency_contact']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password for security
+    $gender = mysqli_real_escape_string($conn, $_POST['gender']); // Add this line to retrieve the gender
 
     // Upload profile image
     $image_path = './images/profile.jpg'; // Default image path
@@ -36,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Error: This username is already registered.'); window.location.href = 'register_student.php';</script>";
     } else {
         // SQL query to insert data into the "student" table
-        $insert_query = "INSERT INTO student (first_name, middle_name, last_name, dob, phone_number, father_name, father_number, mother_name, mother_number, emergency_contact, username, password, profile_image)
-                        VALUES ('$first_name', '$middle_name', '$last_name', '$dob', '$phone_number', '$father_name', '$father_number', '$mother_name', '$mother_number', '$emergency_contact', '$username', '$password', '$image_path')";
+        $insert_query = "INSERT INTO student (first_name, middle_name, last_name, dob, phone_number, father_name, father_number, mother_name, mother_number, emergency_contact, username, password, profile_image, gender)
+                        VALUES ('$first_name', '$middle_name', '$last_name', '$dob', '$phone_number', '$father_name', '$father_number', '$mother_name', '$mother_number', '$emergency_contact', '$username', '$password', '$image_path', '$gender')";
 
         // Execute the query
         if (mysqli_query($conn, $insert_query)) {

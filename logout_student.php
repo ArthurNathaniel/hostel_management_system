@@ -9,6 +9,6 @@ $_SESSION = array();
 session_destroy();
 
 // Redirect to the student login page
-header("Location: index.php");
+header("Location: login_student.php");
 exit();
 ?>

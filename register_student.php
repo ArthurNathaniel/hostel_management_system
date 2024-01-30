@@ -57,7 +57,7 @@
                         <input type="text" name="father_name" id="father_name" required />
                     </div>
                     <div class="forms">
-                        <label for="father_number">Father's Name:</label>
+                        <label for="father_number">Father's Number:</label>
                         <input type="tel" name="father_number" id="father_number" required />
                     </div>
                     <div class="forms">

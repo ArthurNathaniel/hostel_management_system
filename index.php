@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <?php include 'cdn.php';?>
+    <?php include 'cdn.php'; ?>
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <?php include 'navbar.php';?>
+    <?php include 'navbar.php'; ?>
     <section>
         <div class="hero_all">
             <div class="hero_text" id="animatedText">
@@ -104,10 +104,7 @@
     <section>
         <div class="contact_all">
             <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126804.78769318192!2d-1.6985085189253444!3d6.690249146573474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c1e64db743ce00d%3A0x7fb7d9ac845c5d60!2sNathstack!5e0!3m2!1sen!2sgh!4v1706544977201!5m2!1sen!2sgh"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126804.78769318192!2d-1.6985085189253444!3d6.690249146573474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c1e64db743ce00d%3A0x7fb7d9ac845c5d60!2sNathstack!5e0!3m2!1sen!2sgh!4v1706544977201!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="contact_forms">
                 <form action="" method="post">
@@ -145,7 +142,7 @@
             <h2>Hostel <span>Systems</span></h2>
         </div>
         <div class="social_media">
-            <h3>Connect with on all Social Media Plaforms</h3>
+            <h3>Connect with on all Social Media Platforms</h3>
             <div class="media_links">
                 <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -153,6 +150,9 @@
                 <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
 
             </div>
+            <p>
+                <a href="login.php">Login as Admin</a>
+            </p>
         </div>
         <div class="copyright">
             <p>
@@ -164,7 +164,7 @@
             </p>
         </div>
     </section>
-<script src="./js/navbar.js"></script>
+    <script src="./js/navbar.js"></script>
     <!-- Include jQuery and Lightbox scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
@@ -174,7 +174,9 @@
 
     <script>
         // Use anime.js to animate the text
-        anime.timeline({ loop: false })
+        anime.timeline({
+                loop: false
+            })
             .add({
                 targets: '#animatedText h1',
                 opacity: [0, 1],

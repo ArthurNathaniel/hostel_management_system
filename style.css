@@ -105,11 +105,11 @@ body{
     background-color: #fff;
     color: #6158e5;
     font-weight: 900;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
 }
 
 .hero_text span:hover {
-    box-shadow: none;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .hero_text p {
@@ -232,6 +232,10 @@ label{
     text-align: center;
 }
 
+.social_media p a{
+    color: #060240 !important;
+}
+
 .logo_footer{
     margin-bottom: 30px;
     color: #060240;
@@ -300,6 +304,7 @@ label{
     #toggleButton {
         display: block;
         color: #f4f2ee !important;
+        background-color: #6158e5 !important;
     }
     .logo_name{
         text-align: center;
@@ -311,5 +316,37 @@ label{
     }
     .hero_text h1{
         font-size: 45px;
+    }
+    .services_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .gallery_grid{
+        display: grid;
+            grid-template-columns: 1fr 1fr;
+    }
+    .contact_all{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .map{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .map iframe{
+        height: 500px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+.services_grid {
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+
+    .gallery_grid {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }

@@ -89,9 +89,9 @@ $conn->close();
                     <div class="forms">
                         <button type="submit">Login</button>
                     </div>
-                    <!-- <div class="forms">
-                        <a href="./reset_password.php">Forget password</a>
-                    </div> -->
+                    <div class="forms">
+                        <a href="forgot_password.php">Forgot Password?</a>
+                    </div>
                 </div>
             </form>
         </div>

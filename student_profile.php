@@ -85,6 +85,10 @@ $stmt->close();
                 <h4>Emergency Contact:</h4>
                 <p> <?php echo $emergency_contact; ?></p>
             </div>
+            <div class="profile">
+                <h4>Username:</h4>
+                <p> <?php echo $username; ?></p>
+            </div>
         </div>
 
 
@@ -101,7 +105,7 @@ $stmt->close();
     </div>
     <script src="./js/navbar.js"></script>
     <style>
-        
+
     </style>
 </body>
 

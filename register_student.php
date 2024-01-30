@@ -1,4 +1,14 @@
+<?php
+session_start(); // Start the session
 
+// Check if the user is not authenticated
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
+    // Redirect to the login page
+    header("Location: login.php");
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +35,7 @@
                 </div>
                 <div class="profile_all">
                     <img id="img-preview" src="./images/profile.jpg" />
-                   
+
                     <label for="file-input" class="label">Upload Image</label>
                     <input accept="image/*" type="file" name="file-input" id="file-input" required />
 
@@ -38,7 +48,7 @@
                     </div>
                     <div class="forms">
                         <label for="middle_name">Middle Name:</label>
-                        <input type="text" name="middle_name" id="middle_name"  />
+                        <input type="text" name="middle_name" id="middle_name" />
                     </div>
                     <div class="forms">
                         <label for="last_name">Last Name:</label>
@@ -93,7 +103,7 @@
                 maxDate: "today" // Optionally set a maximum date (e.g., today)
             });
         </script>
-       
+
         <script>
             const input = document.getElementById("file-input");
             const image = document.getElementById("img-preview");

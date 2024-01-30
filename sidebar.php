@@ -6,7 +6,7 @@
         <a href="./view_students.php"> <i class="fas fa-users"></i> View all students</a>
         <a href="./make_announcement.php"> <i class="fas fa-bullhorn"></i> Make Announcement</a>
         <a href="./delete_announcement.php"> <i class="fas fa-trash-alt"></i> Delete Announcement</a>
-        <!-- <a href="./student_and_room.php"> Student & Room</a> -->
+        <a href="./view_booking.php"> <i class="fas fa-list"></i> View Booking</a>
 
     </div>
     <div class="logout">

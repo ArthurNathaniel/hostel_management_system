@@ -4,7 +4,7 @@
         <a href="./student_profile.php" class="ll">Student profile</a>
         <a href="./announcement.php">Announcement</a>
         <a href="./rules_and_regulations.php">Rules & Regulations</a>
-        <a href="#">Change password</a>
+        <a href="./forgot_password.php">Change password</a>
 
 
     </div>

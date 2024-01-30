@@ -42,7 +42,7 @@
 
         // Check if the hostel is full
         $current_bookings = getCurrentBookingsCount();
-        $max_capacity = 3; // You can adjust this according to your needs
+        $max_capacity = 6; // You can adjust this according to your needs
 
         if ($current_bookings >= $max_capacity) {
             echo "<p class='full_message'>Sorry, the hostel is full. No more bookings are allowed at the moment.</p>";
@@ -84,7 +84,6 @@
             </div>
         </form>
     </div>
-    <?php include 'footer.php' ?>
 </body>
 
 </html>

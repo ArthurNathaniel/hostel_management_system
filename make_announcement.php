@@ -52,7 +52,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                 $announcement = trim($_POST['announcement']);
 
                 if (empty($announcement)) {
-                    echo '<p style="color: red;">Error: Announcement cannot be empty.</p>';
+                    // echo '<p style="color: red;">Error: Announcement cannot be empty.</p>';
+                    echo "<script>alert('Error: Announcement cannot be empty.');</script>";
+
                 } else {
                     try {
                         checkAndReconnect($conn); // Check and reconnect if needed
@@ -62,7 +64,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                         $stmt->bind_param("s", $announcement);
 
                         if ($stmt->execute()) {
-                            echo "Announcement added successfully!";
+                            // echo "Announcement added successfully!";
+                            echo "<script>alert('Announcement added successfully!');</script>";
+
                         } else {
                             echo "Error: " . $stmt->error;
                         }

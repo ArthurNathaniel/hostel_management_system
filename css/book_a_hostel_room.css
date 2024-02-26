@@ -1,10 +1,11 @@
 
-body{
+.body{
     display: flex;
     flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        
 }
 .book_a_hostel_room{
     background-color: #fff;
@@ -29,10 +30,13 @@ body{
 .forms input{
     height: 50px;
     border: 2px solid #6158e5;
+    border-radius: 10px;
+    padding-left: 2%;
 }
 .forms select{
     height: 50px;
     border: 2px solid #6158e5;
+    border-radius: 10px;
 }
 .forms input:focus{
     outline: none;
@@ -46,6 +50,7 @@ body{
     border: none;
 background-color: #6158e5;
     color: #fff;
+    border-radius: 10px;
 }
 
 .footer{
@@ -71,4 +76,38 @@ background-color: #6158e5;
   .full_message.hidden {
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
+  }
+
+  .title h1{
+    text-align: center;
+    color: #6158e5;
+    margin-bottom: 15px;
+  }
+
+  #selectElement{
+    height: 50px !important;
+  }
+
+  .ss-main {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      user-select: none;
+      color: var(--ss-font-color);
+      min-height: var(--ss-main-height);
+      width: 100%;
+      padding: var(--ss-spacing-s);
+      cursor: pointer;
+      border: 2px solid #6158e5;
+    border-radius: 10px;      
+    background-color:#fff;
+      outline: none;
+      box-sizing: border-box;
+      height: 50px;
+      transition: background-color var(--ss-animation-timing);
+      overflow: hidden;
+      box-shadow: none;
+  }
+  .ss-main input:focus{
+    outline: none;
   }

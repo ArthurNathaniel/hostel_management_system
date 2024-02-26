@@ -89,6 +89,9 @@ $conn->close();
                     <div class="forms">
                         <button type="submit">Login</button>
                     </div>
+                    <div class="forms">
+                        <a href="index.php">Back to the Home page</a>
+                    </div>
                 </div>
             </form>
         </div>

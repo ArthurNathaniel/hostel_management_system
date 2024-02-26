@@ -89,8 +89,13 @@ $conn->close();
                     <div class="forms">
                         <button type="submit">Login</button>
                     </div>
-                    <div class="forms">
-                        <a href="forgot_password.php">Forgot Password?</a>
+                    <div class="students_down">
+                        <div class="forms">
+                            <a href="forgot_password.php">Forgot Password?</a>
+                        </div>
+                        <div class="forms">
+                            <a href="index.php">Back to the Home page</a>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -100,3 +105,11 @@ $conn->close();
 </body>
 
 </html>
+
+<style>
+    .students_down{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    }
+</style>

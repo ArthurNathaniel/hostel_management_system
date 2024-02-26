@@ -61,7 +61,7 @@ $conn->close();
                 <input type="text" name="phone_number" id="phone_number" required />
             </div>
             <div class="forms">
-                <button type="submit">Submit</button>
+                <button     type="submit">Submit</button>
             </div>
         </div>
     </form>

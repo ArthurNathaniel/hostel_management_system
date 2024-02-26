@@ -32,6 +32,7 @@
                 }
             } else {
                 echo "No announcements available.";
+                
             }
 
             $conn->close();

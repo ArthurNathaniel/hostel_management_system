@@ -49,7 +49,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
                 $stmt->bind_param("i", $announcement_id);
 
                 if ($stmt->execute()) {
-                    echo "Announcement deleted successfully!";
+                    // echo "Announcement deleted successfully!";
+                    echo "<script>alert('Announcement deleted successfully!');</script>";
+
                 } else {
                     echo "Error: " . $stmt->error;
                 }

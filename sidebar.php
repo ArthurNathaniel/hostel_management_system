@@ -2,6 +2,7 @@
     <div class="logo"></div>
     <div class="links">
         <a href="./dashboard.php" class="ll"> <i class="fas fa-home"></i> Dashboard</a>
+        <a href="create_a_room.php"><i class="fas fa-plus"></i> Create a hostel room</a>
         <a href="./register_student.php"> <i class="fas fa-user-plus"></i> Register a student</a>
         <a href="./view_students.php"> <i class="fas fa-users"></i> View all students</a>
         <a href="./make_announcement.php"> <i class="fas fa-bullhorn"></i> Make Announcement</a>
